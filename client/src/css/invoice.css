@@ -1,0 +1,333 @@
+.section {
+  width: 100%;
+  background: #fff;
+  padding: 10px;
+  margin-top: 10px;
+  min-height: calc(100vh - 140px);
+}
+
+.invoice_form {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 10px;
+  border-bottom: 2px dashed blue;
+}
+
+.invoice_buttons {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.add_item {
+  color: #414141;
+}
+
+.invoice {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.input_field {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.input_field .input {
+  padding: 10px;
+  border-radius: 5px;
+  border: 2px solid rgb(112, 112, 255);
+  outline: none;
+}
+
+.addInvoice {
+  padding: 10px 15px;
+  border-radius: 20px;
+  border: none;
+  background: rgb(91, 91, 253);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+  transition: all 0.3s;
+  text-transform: capitalize;
+  font-size: 14px;
+  /* visibility: hidden; */
+}
+
+.addInvoice:hover {
+  scale: 1.05;
+}
+
+.invoice_table {
+  max-width: 100%;
+  overflow: auto;
+  width: 100%;
+  padding: 5px;
+}
+
+.table {
+  width: 100%;
+  border-radius: 5px;
+  overflow: hidden;
+  margin-top: 5px;
+  border-collapse: collapse;
+}
+
+thead {
+  width: 100%;
+}
+
+thead .th {
+  padding: 10px;
+  text-transform: capitalize;
+  background: #333;
+  color: #fff;
+  border-right: 2px solid #fff;
+  width: calc(100%);
+}
+
+tbody .row:nth-child(odd),
+tbody tr:nth-child(odd) {
+  background: #d7e6ff;
+}
+tbody .row:nth-child(even),
+tbody tr:nth-child(even) {
+  background: #f3f3f3;
+}
+
+tbody .td {
+  padding: 5px;
+  width: calc(100%);
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: stretch;
+  width: 100%;
+}
+
+.action {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 5px;
+  flex-wrap: wrap;
+}
+
+.action .button {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  opacity: 0.7;
+  transition: all 0.2s;
+}
+
+.action .button:hover {
+  opacity: 1;
+  scale: 1.06;
+}
+
+.action .button.edit {
+  background: #0000ff;
+}
+
+.action .button.remove {
+  background: #df5e5e;
+}
+
+.total_box {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 5px;
+  list-style: none;
+}
+
+.total {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.value {
+  min-width: 70px;
+}
+
+.list_title {
+  display: flex;
+  gap: 5px;
+  padding: 3px;
+}
+
+li {
+  list-style: none;
+}
+
+.total_amt {
+  border-bottom: 2px solid green;
+}
+
+/* Popup container */
+.popup {
+  position: fixed; /* Position fixed so it's always visible */
+  z-index: 1; /* Make sure it appears on top of other elements */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scrolling if needed */
+  background-color: rgba(0, 0, 0, 0.5); /* Black background with opacity */
+}
+
+@keyframes popup {
+  0% {
+    scale: 1;
+  }
+  25% {
+    scale: 1.2;
+  }
+  50% {
+    scale: 1;
+  }
+  75% {
+    scale: 1.2;
+  }
+  100% {
+    scale: 1;
+  }
+}
+
+/* Popup content */
+.popup-content {
+  background-color: #fefefe;
+  margin: 20% auto; /* 20% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 60%; /* Could be adjusted */
+  min-width: 300px;
+  animation: popup 0.5s ease-in forwards;
+  border-radius: 5px;
+}
+
+/* Close button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.right {
+  text-align: right;
+}
+
+.cutting_line {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  border: 1px dashed #0000ff;
+  position: relative;
+  color: #0000ff;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  display: none;
+}
+
+.cut_icon {
+  position: absolute;
+}
+
+@media print {
+  .print {
+    display: none;
+  }
+  .cutting_line {
+    display: flex;
+  }
+  .invoice_table {
+    max-width: 100%;
+    overflow: auto;
+    width: 100%;
+    display: block;
+  }
+
+  .table {
+    width: 100%;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-top: 5px;
+    border-collapse: collapse;
+  }
+
+  .table .th {
+    background: #333;
+    color: #fff;
+  }
+
+  /* WebKit-specific styles */
+  @media print and (-webkit-min-device-pixel-ratio: 0) {
+    .print {
+      display: none !important;
+    }
+    .cutting_line {
+      display: flex;
+    }
+    .invoice_table {
+      max-width: 100%;
+      overflow: auto;
+      width: 100%;
+      display: block;
+    }
+
+    .table {
+      width: 100%;
+      border-radius: 5px;
+      overflow: hidden;
+      margin-top: 5px;
+      border-collapse: collapse;
+    }
+
+    .table .th {
+      background: #333;
+      color: #fff;
+    }
+  }
+}
+
+::-webkit-scrollbar {
+  width: 3px;
+  height: 3px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #aeaeff;
+}

@@ -1,0 +1,187 @@
+#myChart {
+  max-width: calc(100%) !important;
+  max-height: auto;
+}
+
+.left_chart {
+  max-width: calc(100% - 10px);
+  min-width: 300px;
+  width: 50%;
+  max-height: calc(100vh - 160px);
+  overflow-y: scroll;
+  position: relative;
+}
+
+.left_chart.active {
+  position: fixed;
+  z-index: 1000;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  max-width: 100vw;
+  max-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: #fff;
+}
+
+.minmax {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: none;
+  background: #4242fe;
+  color: #ffffff;
+  font-size: 20px;
+  cursor: pointer;
+  scale: 1;
+  transition: all 0.2s;
+}
+
+.minmax:hover {
+  scale: 1.05;
+  background: #0000ff;
+}
+.inner_left {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.inner_section {
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.left_chart {
+  display: flex;
+  justify-content: center;
+}
+
+@keyframes move-up {
+  0% {
+    transform: translateY(100px);
+  }
+}
+
+.left_chart.active #myChart {
+  animation: move-up 0.9s ease-in forwards;
+}
+
+.analysis_menu {
+  width: 100%;
+}
+
+.btns {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.btns button {
+  padding: 7px 15px;
+  border-radius: 5px;
+  border: none;
+  text-transform: capitalize;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+
+.btns button:hover {
+  scale: 1.05;
+  background: #d6ddff;
+}
+
+.btns button.active {
+  background: #0000ff;
+  color: #fff;
+}
+
+.left_chart .th {
+  text-wrap: nowrap;
+  width: calc(100%);
+}
+
+.left_chart .table {
+  width: 100%;
+}
+
+.list .button {
+  border-radius: 50%;
+}
+
+.list {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.menu_result {
+  width: 100%;
+  padding: 5px;
+}
+
+th.sno {
+  max-width: 50px;
+}
+
+.view_popup {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  width: 100%;
+  height: 100%;
+}
+
+.inner_view {
+  min-width: 300px;
+  max-width: calc(100% - 10px);
+  width: 70%;
+  border-radius: 5px;
+  padding: 10px;
+  background: #fff;
+  position: relative;
+}
+
+.title {
+  margin-top: 10px;
+}
+
+.closePopup {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: transparent;
+  border: none;
+  font-size: 22px;
+  color: #878787;
+  cursor: pointer;
+  transition: all 0.1s;
+}
+
+.closePopup:hover {
+  color: #2b2b2b;
+}
+
+@media screen and (max-width: 760px) {
+  .inner_section {
+    flex-direction: column-reverse;
+  }
+  .left_chart {
+    width: 100%;
+  }
+}
