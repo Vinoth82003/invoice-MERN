@@ -79,7 +79,7 @@ The Invoice App relies on the following dependencies:
 
 ## License
 
-The Invoice App is licensed under the MIT License.
+The Invoice App is licensed under the [LICENSE](MIT) License.
 
 ### Contact
 
