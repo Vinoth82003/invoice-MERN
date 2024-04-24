@@ -2,7 +2,7 @@
 
 const express = require("express");
 const router = express.Router();
-const Invoice = require("../models/Invoice"); // Assuming you have a model for Invoice
+const Invoice = require("../models/Schema"); // Assuming you have a model for Invoice
 
 // MongoDB connection setup
 const mongoose = require("mongoose");

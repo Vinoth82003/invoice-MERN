@@ -2,7 +2,7 @@
 
 const express = require("express");
 const router = express.Router();
-const Analysis = require("../models/Analysis"); // Assuming you have a model for Analysis
+const Analysis = require("../models/Schema"); // Assuming you have a model for Analysis
 
 // MongoDB connection setup
 const mongoose = require("mongoose");
