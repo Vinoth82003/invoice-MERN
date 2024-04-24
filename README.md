@@ -37,28 +37,23 @@ Before using the Invoice App, ensure you have the following prerequisites instal
 
 ### Usage
 
-Concurrently: Tool to run multiple commands concurrently.
+#### Concurrently: Tool to run multiple commands concurrently.
 
     ```npm
         npm install concurrently --save-dev
     ```
 
-Package.json: add this in your package.json.
+#### Concurrently: Tool to run multiple commands concurrently.
 
     ```npm
-        "scripts": {
-        "start": "node app.js",
-        "client": "npm start --prefix client",
-        "dev": "concurrently \"npm run start\" \"npm run client\""
-        },
-
-````
+        npm install concurrently --save-dev
+    ```
 
 1. Start the development server:
 
    ```bash
-   npm start
-````
+   npm run dev
+   ```
 
 2. Open your web browser and navigate to [http://localhost:3000](http://localhost:3000) to access the Invoice App.
 
