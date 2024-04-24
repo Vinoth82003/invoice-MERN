@@ -46,11 +46,12 @@ Before using the Invoice App, ensure you have the following prerequisites instal
 
    ```bash
    {
-        "scripts": {
+        "scripts":
+        {
         "start": "node server.js",
         "client": "npm start --prefix client",
         "dev": "concurrently \"npm run start\" \"npm run client\"",
-    },
+        },
    }
 
    ```
