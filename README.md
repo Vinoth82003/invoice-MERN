@@ -39,13 +39,13 @@ Before using the Invoice App, ensure you have the following prerequisites instal
 
 #### Concurrently: Tool to run multiple commands concurrently.
 
-    ```npm
+    ```bash
         npm install concurrently --save-dev
     ```
 
 #### Concurrently: Tool to run multiple commands concurrently.
 
-    ```npm
+    ```bash
         npm install concurrently --save-dev
     ```
 
