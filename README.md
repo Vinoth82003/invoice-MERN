@@ -32,22 +32,30 @@ Before using the Invoice App, ensure you have the following prerequisites instal
 3. Install dependencies:
 
    ```bash
-   npm install
+   npm install react react-dom react-scripts axios
+   ```
+
+4. Install Concurrently:
+
+   ```bash
+   npm install concurrently --save-dev
+
+   ```
+
+5. Add it to package.json:
+
+   ```bash
+   {
+        "scripts": {
+        "start": "node server.js",
+        "client": "npm start --prefix client",
+        "dev": "concurrently \"npm run start\" \"npm run client\"",
+    },
+   }
+
    ```
 
 ### Usage
-
-#### Concurrently: Tool to run multiple commands concurrently.
-
-    ```bash
-        npm install concurrently --save-dev
-    ```
-
-#### Concurrently: Tool to run multiple commands concurrently.
-
-    ```bash
-        npm install concurrently --save-dev
-    ```
 
 1. Start the development server:
 
@@ -67,12 +75,6 @@ The Invoice App relies on the following dependencies:
 - `react-dom`: ^18.2.0
 - `react-scripts`: 5.0.1
 - `axios`: ^0.25.0
-
-To install these dependencies, run:
-
-```bash
-npm install react react-dom react-scripts axios
-```
 
 ## License
 
