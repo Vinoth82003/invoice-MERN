@@ -1,7 +1,0 @@
-#.env ignoring
-.env
-
-#node modules ignore
-node_modules/
-
-client/node_modules/

@@ -11,38 +11,7 @@ function App() {
   const [isInvoice, setInvoice] = useState(true);
   const [isAnalysis, setAnalysis] = useState(false);
   const [currentPath, setCurrentPath] = useState("invoice");
-  const [items, setItems] = useState([
-    {
-      id: "1",
-      productName: "test1",
-      price: 12000,
-      tax: 12,
-    },
-    {
-      id: "2",
-      productName: "test2",
-      price: 1000,
-      tax: 10,
-    },
-    {
-      id: "3",
-      productName: "test2",
-      price: 12000,
-      tax: 10,
-    },
-    {
-      id: "4",
-      productName: "test2",
-      price: 1200,
-      tax: 10,
-    },
-    {
-      id: "5",
-      productName: "test2",
-      price: 1000,
-      tax: 10,
-    },
-  ]); // Add items state here
+  const [items, setItems] = useState([]); // Add items state here
 
   // Create the value object to pass to the context provider
   const value = {
