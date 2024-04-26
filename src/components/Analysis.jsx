@@ -21,11 +21,6 @@ const Analysis = () => {
     { productId: "#0001", NoFProduct: 5, date: "11/11/1111" },
     { productId: "#0002", NoFProduct: 6, date: "11/11/1111" },
     { productId: "#0003", NoFProduct: 10, date: "11/11/1111" },
-    { productId: "#0004", NoFProduct: 10, date: "11/11/1111" },
-    { productId: "#0005", NoFProduct: 10, date: "11/11/1111" },
-    { productId: "#0006", NoFProduct: 10, date: "11/11/1111" },
-    { productId: "#0007", NoFProduct: 10, date: "11/11/1111" },
-    { productId: "#0008", NoFProduct: 10, date: "11/11/1111" },
   ];
   const monthInvoice = [
     { productId: "#0001", NoFProduct: 5, date: "11/11/1111" },
@@ -33,12 +28,6 @@ const Analysis = () => {
     { productId: "#0003", NoFProduct: 10, date: "11/11/1111" },
     { productId: "#0001", NoFProduct: 5, date: "11/11/1111" },
     { productId: "#0002", NoFProduct: 6, date: "11/11/1111" },
-    { productId: "#0003", NoFProduct: 10, date: "11/11/1111" },
-    { productId: "#0004", NoFProduct: 10, date: "11/11/1111" },
-    { productId: "#0005", NoFProduct: 10, date: "11/11/1111" },
-    { productId: "#0006", NoFProduct: 10, date: "11/11/1111" },
-    { productId: "#0007", NoFProduct: 10, date: "11/11/1111" },
-    { productId: "#0008", NoFProduct: 10, date: "11/11/1111" },
   ];
   const yearInvoice = [
     { productId: "#0001", NoFProduct: 5, date: "11/11/1111" },
@@ -51,18 +40,6 @@ const Analysis = () => {
     { productId: "#0005", NoFProduct: 10, date: "11/11/1111" },
     { productId: "#0006", NoFProduct: 10, date: "11/11/1111" },
     { productId: "#0007", NoFProduct: 10, date: "11/11/1111" },
-    { productId: "#0008", NoFProduct: 10, date: "11/11/1111" },
-    { productId: "#0001", NoFProduct: 5, date: "11/11/1111" },
-    { productId: "#0002", NoFProduct: 6, date: "11/11/1111" },
-    { productId: "#0003", NoFProduct: 10, date: "11/11/1111" },
-    { productId: "#0001", NoFProduct: 5, date: "11/11/1111" },
-    { productId: "#0002", NoFProduct: 6, date: "11/11/1111" },
-    { productId: "#0003", NoFProduct: 10, date: "11/11/1111" },
-    { productId: "#0004", NoFProduct: 10, date: "11/11/1111" },
-    { productId: "#0005", NoFProduct: 10, date: "11/11/1111" },
-    { productId: "#0006", NoFProduct: 10, date: "11/11/1111" },
-    { productId: "#0007", NoFProduct: 10, date: "11/11/1111" },
-    { productId: "#0008", NoFProduct: 10, date: "11/11/1111" },
   ];
   const [showSearch, setshowSearch] = useState(false);
   const [activeButton, setActiveButton] = useState("today");
